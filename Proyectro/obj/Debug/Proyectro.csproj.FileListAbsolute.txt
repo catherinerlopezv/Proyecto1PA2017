@@ -1,0 +1,10 @@
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.csprojResolveAssemblyReference.cache
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.Form1.resources
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.Properties.Resources.resources
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.csproj.GenerateResource.Cache
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.csproj.CoreCompileInputs.cache
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\bin\Debug\Proyectro.exe.config
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\bin\Debug\Proyectro.exe
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\bin\Debug\Proyectro.pdb
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.exe
+C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.pdb
