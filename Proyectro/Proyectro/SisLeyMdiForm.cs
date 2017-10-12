@@ -12,6 +12,8 @@ namespace Proyectro
 {
     public partial class SisLeyMdiForm : Form
     {
+
+        private SisLey sistema;
         
         public SisLeyMdiForm()
         {
@@ -31,7 +33,8 @@ namespace Proyectro
 
         private void SisLey_Load(object sender, EventArgs e)
         {
-           
+            sistema = SisLey.getInstance();
+            sistema.initializeData();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,7 +60,7 @@ namespace Proyectro
             OpcionUsuarios.Enabled = false;
             OpcionLeyes.Enabled = false;
             OpcionPrestamo.Enabled = false;
-            OpcionDevolucion.Enabled = false;
+            
         }
 
         public void HabilitarAdministrador()
@@ -69,7 +72,7 @@ namespace Proyectro
         public void HabilitarPrestamo()
         {
             OpcionPrestamo.Enabled = true;
-            OpcionDevolucion.Enabled = true;
+            
         }
 
         private void doLogin_Click(object sender, EventArgs e)

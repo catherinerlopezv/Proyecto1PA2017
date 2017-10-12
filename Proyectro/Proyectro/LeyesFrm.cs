@@ -263,7 +263,7 @@ namespace Proyectro
                 {
                     Reglamento reglamento = new Reglamento();
 
-                    var max_value = 0;
+                    var max_value = leySeleccionado.NumeroDocumento * 1000;
                     if (leySeleccionado.Reglamentos.Count > 0)
                     {
                         max_value = (from Reglamento item in leySeleccionado.Reglamentos

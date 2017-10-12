@@ -13,6 +13,7 @@ namespace Proyectro
         private string usuario;
         private int numGrupo;
         private string estado;
+        private int numeroDocumentoMaestro;
 
         public int NumeroDocumento
         {
@@ -71,6 +72,18 @@ namespace Proyectro
             set
             {
                 estado = value;
+            }
+        }
+
+        public int NumeroDocumentoMaestro
+        {
+            get
+            {
+                return numeroDocumentoMaestro;
+            }
+            set
+            {
+                numeroDocumentoMaestro = value;
             }
         }
     }

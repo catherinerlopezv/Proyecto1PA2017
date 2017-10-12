@@ -40,13 +40,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.historialPrestamos = new System.Windows.Forms.RadioButton();
+            this.informeXgrupo = new System.Windows.Forms.RadioButton();
+            this.informeXley = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dvgPrestamosLey = new System.Windows.Forms.DataGridView();
             this.dgvPrestamosReglamento = new System.Windows.Forms.DataGridView();
+            this.dvgPrestamosLey = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dvgLeyes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgReglamentos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPrestamosLey)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosReglamento)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPrestamosLey)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -78,7 +90,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(538, 23);
             this.button1.Name = "button1";
@@ -90,25 +102,41 @@
             // 
             // dvgLeyes
             // 
+            this.dvgLeyes.AllowUserToAddRows = false;
+            this.dvgLeyes.AllowUserToDeleteRows = false;
+            this.dvgLeyes.AllowUserToResizeRows = false;
+            this.dvgLeyes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dvgLeyes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dvgLeyes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgLeyes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dvgLeyes.Location = new System.Drawing.Point(30, 53);
+            this.dvgLeyes.MultiSelect = false;
             this.dvgLeyes.Name = "dvgLeyes";
+            this.dvgLeyes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgLeyes.Size = new System.Drawing.Size(594, 150);
             this.dvgLeyes.TabIndex = 4;
             this.dvgLeyes.SelectionChanged += new System.EventHandler(this.dvgLeyes_SelectionChanged);
             // 
             // dvgReglamentos
             // 
+            this.dvgReglamentos.AllowUserToAddRows = false;
+            this.dvgReglamentos.AllowUserToDeleteRows = false;
+            this.dvgReglamentos.AllowUserToResizeRows = false;
+            this.dvgReglamentos.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dvgReglamentos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dvgReglamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgReglamentos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dvgReglamentos.Location = new System.Drawing.Point(30, 303);
+            this.dvgReglamentos.MultiSelect = false;
             this.dvgReglamentos.Name = "dvgReglamentos";
+            this.dvgReglamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgReglamentos.Size = new System.Drawing.Size(594, 150);
             this.dvgReglamentos.TabIndex = 9;
             this.dvgReglamentos.SelectionChanged += new System.EventHandler(this.dvgReglamentos_SelectionChanged);
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Gold;
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(538, 273);
             this.button2.Name = "button2";
@@ -146,60 +174,190 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Gold;
             this.button3.Location = new System.Drawing.Point(496, 209);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 23);
             this.button3.TabIndex = 10;
             this.button3.Text = "Prestar Ley (Lote)";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.Gold;
             this.button4.Location = new System.Drawing.Point(496, 459);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(128, 23);
             this.button4.TabIndex = 11;
             this.button4.Text = "Prestar Reglamento";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.historialPrestamos);
+            this.groupBox1.Controls.Add(this.informeXgrupo);
+            this.groupBox1.Controls.Add(this.informeXley);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.button7);
+            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.button6);
+            this.groupBox1.Controls.Add(this.button5);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.dgvPrestamosReglamento);
+            this.groupBox1.Controls.Add(this.dvgPrestamosLey);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(667, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(452, 488);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Listado de Prestamos";
+            // 
+            // historialPrestamos
+            // 
+            this.historialPrestamos.AutoSize = true;
+            this.historialPrestamos.Checked = true;
+            this.historialPrestamos.Location = new System.Drawing.Point(55, 51);
+            this.historialPrestamos.Name = "historialPrestamos";
+            this.historialPrestamos.Size = new System.Drawing.Size(164, 24);
+            this.historialPrestamos.TabIndex = 28;
+            this.historialPrestamos.TabStop = true;
+            this.historialPrestamos.Text = "Historial Prestamos";
+            this.historialPrestamos.UseVisualStyleBackColor = true;
+            // 
+            // informeXgrupo
+            // 
+            this.informeXgrupo.AutoSize = true;
+            this.informeXgrupo.Location = new System.Drawing.Point(225, 59);
+            this.informeXgrupo.Name = "informeXgrupo";
+            this.informeXgrupo.Size = new System.Drawing.Size(85, 24);
+            this.informeXgrupo.TabIndex = 27;
+            this.informeXgrupo.TabStop = true;
+            this.informeXgrupo.Text = "# Grupo";
+            this.informeXgrupo.UseVisualStyleBackColor = true;
+            // 
+            // informeXley
+            // 
+            this.informeXley.AutoSize = true;
+            this.informeXley.Location = new System.Drawing.Point(225, 37);
+            this.informeXley.Name = "informeXley";
+            this.informeXley.Size = new System.Drawing.Size(65, 24);
+            this.informeXley.TabIndex = 26;
+            this.informeXley.TabStop = true;
+            this.informeXley.Text = "# Ley";
+            this.informeXley.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(215, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 20);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Informe por:";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(381, 53);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(57, 23);
+            this.button7.TabIndex = 24;
+            this.button7.Text = "Buscar";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(319, 53);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(56, 26);
+            this.numericUpDown1.TabIndex = 21;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.LimeGreen;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(259, 447);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(153, 23);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "Devolver Reglamento";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.LimeGreen;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(259, 257);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(153, 23);
+            this.button5.TabIndex = 18;
+            this.button5.Text = "Devolver Ley (Lote)";
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "Reglamentos";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(762, 9);
+            this.label5.Location = new System.Drawing.Point(6, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(98, 24);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Prestamos";
-            // 
-            // dvgPrestamosLey
-            // 
-            this.dvgPrestamosLey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgPrestamosLey.Location = new System.Drawing.Point(810, 53);
-            this.dvgPrestamosLey.Name = "dvgPrestamosLey";
-            this.dvgPrestamosLey.Size = new System.Drawing.Size(433, 150);
-            this.dvgPrestamosLey.TabIndex = 13;
-            this.dvgPrestamosLey.SelectionChanged += new System.EventHandler(this.dvgPrestamosLey_SelectionChanged);
+            this.label5.Size = new System.Drawing.Size(51, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Leyes";
             // 
             // dgvPrestamosReglamento
             // 
+            this.dgvPrestamosReglamento.AllowUserToAddRows = false;
+            this.dgvPrestamosReglamento.AllowUserToDeleteRows = false;
+            this.dgvPrestamosReglamento.AllowUserToResizeRows = false;
+            this.dgvPrestamosReglamento.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvPrestamosReglamento.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvPrestamosReglamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrestamosReglamento.Location = new System.Drawing.Point(810, 250);
+            this.dgvPrestamosReglamento.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvPrestamosReglamento.Location = new System.Drawing.Point(6, 291);
+            this.dgvPrestamosReglamento.MultiSelect = false;
             this.dgvPrestamosReglamento.Name = "dgvPrestamosReglamento";
+            this.dgvPrestamosReglamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPrestamosReglamento.Size = new System.Drawing.Size(433, 150);
-            this.dgvPrestamosReglamento.TabIndex = 14;
-            this.dgvPrestamosReglamento.SelectionChanged += new System.EventHandler(this.dgvPrestamosReglamento_SelectionChanged);
+            this.dgvPrestamosReglamento.TabIndex = 15;
+            this.dgvPrestamosReglamento.SelectionChanged += new System.EventHandler(this.dgvPrestamosReglamento_SelectionChanged_1);
+            // 
+            // dvgPrestamosLey
+            // 
+            this.dvgPrestamosLey.AllowUserToAddRows = false;
+            this.dvgPrestamosLey.AllowUserToDeleteRows = false;
+            this.dvgPrestamosLey.AllowUserToResizeRows = false;
+            this.dvgPrestamosLey.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dvgPrestamosLey.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dvgPrestamosLey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgPrestamosLey.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dvgPrestamosLey.Location = new System.Drawing.Point(6, 101);
+            this.dvgPrestamosLey.MultiSelect = false;
+            this.dvgPrestamosLey.Name = "dvgPrestamosLey";
+            this.dvgPrestamosLey.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgPrestamosLey.Size = new System.Drawing.Size(433, 150);
+            this.dvgPrestamosLey.TabIndex = 14;
+            this.dvgPrestamosLey.SelectionChanged += new System.EventHandler(this.dvgPrestamosLey_SelectionChanged_1);
             // 
             // PrestamoFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 576);
-            this.Controls.Add(this.dgvPrestamosReglamento);
-            this.Controls.Add(this.dvgPrestamosLey);
-            this.Controls.Add(this.label5);
+            this.ClientSize = new System.Drawing.Size(1144, 576);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.dvgReglamentos);
@@ -217,8 +375,11 @@
             this.Load += new System.EventHandler(this.PrestamoFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgLeyes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgReglamentos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPrestamosLey)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosReglamento)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgPrestamosLey)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,8 +399,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dvgPrestamosLey;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvPrestamosReglamento;
+        private System.Windows.Forms.DataGridView dvgPrestamosLey;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.RadioButton informeXgrupo;
+        private System.Windows.Forms.RadioButton informeXley;
+        private System.Windows.Forms.RadioButton historialPrestamos;
     }
 }

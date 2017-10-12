@@ -57,9 +57,6 @@ namespace Proyectro
                 c = p.Controls.Find("OpcionPrestamo", true);
                 b = (Button)c[0];
                 b.Enabled = false;
-                c = p.Controls.Find("OpcionDevolucion", true);
-                b = (Button)c[0];
-                b.Enabled = false;
 
 
                 c = p.Controls.Find("doLogin", true);
@@ -88,8 +85,7 @@ namespace Proyectro
 
             // en otro caso busca en la lista de parlamentarios y asesores
             SisLey sistema = SisLey.getInstance();
-            Parlametario parlametario;
-            bool encontrado;
+            bool encontrado = false;
             if (sistema.Parlamentarios.Count > 0)
             {
                 foreach (Parlametario item in sistema.Parlamentarios)
@@ -110,9 +106,6 @@ namespace Proyectro
                             b.Enabled = false;
 
                             c = p.Controls.Find("OpcionPrestamo", true);
-                            b = (Button)c[0];
-                            b.Enabled = true;
-                            c = p.Controls.Find("OpcionDevolucion", true);
                             b = (Button)c[0];
                             b.Enabled = true;
 
@@ -171,9 +164,6 @@ namespace Proyectro
                                 b.Enabled = false;
 
                                 c = p.Controls.Find("OpcionPrestamo", true);
-                                b = (Button)c[0];
-                                b.Enabled = true;
-                                c = p.Controls.Find("OpcionDevolucion", true);
                                 b = (Button)c[0];
                                 b.Enabled = true;
 
