@@ -46,7 +46,7 @@
             this.informeXley = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numeroLeyoGrupo = new System.Windows.Forms.NumericUpDown();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,7 +56,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvgLeyes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgReglamentos)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeroLeyoGrupo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosReglamento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPrestamosLey)).BeginInit();
             this.SuspendLayout();
@@ -201,7 +201,7 @@
             this.groupBox1.Controls.Add(this.informeXley);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.numeroLeyoGrupo);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Controls.Add(this.label6);
@@ -269,13 +269,14 @@
             this.button7.TabIndex = 24;
             this.button7.Text = "Buscar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // numericUpDown1
+            // numeroLeyoGrupo
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(319, 53);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(56, 26);
-            this.numericUpDown1.TabIndex = 21;
+            this.numeroLeyoGrupo.Location = new System.Drawing.Point(319, 53);
+            this.numeroLeyoGrupo.Name = "numeroLeyoGrupo";
+            this.numeroLeyoGrupo.Size = new System.Drawing.Size(56, 26);
+            this.numeroLeyoGrupo.TabIndex = 21;
             // 
             // button6
             // 
@@ -297,8 +298,9 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(153, 23);
             this.button5.TabIndex = 18;
-            this.button5.Text = "Devolver Ley (Lote)";
+            this.button5.Text = "Devolver Ley";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label6
             // 
@@ -377,7 +379,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvgReglamentos)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeroLeyoGrupo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrestamosReglamento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPrestamosLey)).EndInit();
             this.ResumeLayout(false);
@@ -406,7 +408,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numeroLeyoGrupo;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RadioButton informeXgrupo;

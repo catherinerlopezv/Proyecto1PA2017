@@ -146,7 +146,7 @@ namespace Proyectro
                 NumeroDocumento = 1,
                 Titulo = "Ley 001",
                 Contenido = "Ley de primer orden",
-                FechaCreacion = new DateTime(),
+                FechaCreacion = DateTime.Now,
                 NumCopias = 5,
                 CopiasDisponibles = 5,
                 ColaCopias = { 1, 2, 3, 4, 5 },
@@ -157,7 +157,7 @@ namespace Proyectro
                 NumeroDocumento = 1001,
                 Titulo = "Reglamento 1001",
                 Contenido = "Reglamento de primer orden",
-                FechaCreacion = new DateTime(),
+                FechaCreacion = DateTime.Now,
                 NumCopias = 5,
                 CopiasDisponibles = 5,
                 ColaCopias = { 1, 2, 3, 4, 5 }
@@ -170,7 +170,7 @@ namespace Proyectro
                 NumeroDocumento = 1002,
                 Titulo = "Reglamento 1002",
                 Contenido = "Reglamento de primer orden",
-                FechaCreacion = new DateTime(),
+                FechaCreacion = DateTime.Now,
                 NumCopias = 5,
                 CopiasDisponibles = 5,
                 ColaCopias = { 1, 2, 3, 4, 5 }
@@ -185,7 +185,7 @@ namespace Proyectro
                 NumeroDocumento = 2,
                 Titulo = "Ley 002",
                 Contenido = "Ley de segundo orden",
-                FechaCreacion = new DateTime(),
+                FechaCreacion = DateTime.Now,
                 NumCopias = 5,
                 CopiasDisponibles = 5,
                 ColaCopias = { 1, 2, 3, 4, 5 },
@@ -197,7 +197,7 @@ namespace Proyectro
                 NumeroDocumento = 2001,
                 Titulo = "Reglamento 2001",
                 Contenido = "Reglamento de segundo orden",
-                FechaCreacion = new DateTime(),
+                FechaCreacion = DateTime.Now,
                 NumCopias = 5,
                 CopiasDisponibles = 5,
                 ColaCopias = { 1, 2, 3, 4, 5 }
@@ -210,7 +210,7 @@ namespace Proyectro
                 NumeroDocumento = 2002,
                 Titulo = "Reglamento 2002",
                 Contenido = "Reglamento de segundo orden",
-                FechaCreacion = new DateTime(),
+                FechaCreacion = DateTime.Now,
                 NumCopias = 5,
                 CopiasDisponibles = 5,
                 ColaCopias = { 1, 2, 3, 4, 5 }

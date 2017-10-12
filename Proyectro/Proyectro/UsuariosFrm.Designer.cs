@@ -75,6 +75,7 @@
             this.dgvParlamentarios.MultiSelect = false;
             this.dgvParlamentarios.Name = "dgvParlamentarios";
             this.dgvParlamentarios.ReadOnly = true;
+            this.dgvParlamentarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParlamentarios.Size = new System.Drawing.Size(687, 178);
             this.dgvParlamentarios.TabIndex = 0;
             this.dgvParlamentarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParlamentarios_CellContentClick);
@@ -215,6 +216,7 @@
             this.dgvAsesores.MultiSelect = false;
             this.dgvAsesores.Name = "dgvAsesores";
             this.dgvAsesores.ReadOnly = true;
+            this.dgvAsesores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAsesores.Size = new System.Drawing.Size(687, 178);
             this.dgvAsesores.TabIndex = 14;
             this.dgvAsesores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAsesores_CellContentClick);

@@ -11,6 +11,7 @@ C:\Users\ZER0\source\repos\Proyectro\Proyectro\obj\Debug\Proyectro.pdb
 C:\Users\desa0001\Downloads\Proyectro\Proyectro\bin\Debug\Proyectro.exe.config
 C:\Users\desa0001\Downloads\Proyectro\Proyectro\bin\Debug\Proyectro.exe
 C:\Users\desa0001\Downloads\Proyectro\Proyectro\bin\Debug\Proyectro.pdb
+C:\Users\desa0001\Downloads\Proyectro\Proyectro\obj\Debug\Proyectro.csprojResolveAssemblyReference.cache
 C:\Users\desa0001\Downloads\Proyectro\Proyectro\obj\Debug\Proyectro.LoginFrm.resources
 C:\Users\desa0001\Downloads\Proyectro\Proyectro\obj\Debug\Proyectro.LeyesFrm.resources
 C:\Users\desa0001\Downloads\Proyectro\Proyectro\obj\Debug\Proyectro.PrestamoFrm.resources

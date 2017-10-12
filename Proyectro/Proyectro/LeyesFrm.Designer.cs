@@ -136,6 +136,7 @@
             this.dgvReglamentos.MultiSelect = false;
             this.dgvReglamentos.Name = "dgvReglamentos";
             this.dgvReglamentos.ReadOnly = true;
+            this.dgvReglamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReglamentos.Size = new System.Drawing.Size(683, 175);
             this.dgvReglamentos.TabIndex = 66;
             this.dgvReglamentos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReglamentos_CellContentClick);
@@ -245,6 +246,7 @@
             this.dgvLeyes.MultiSelect = false;
             this.dgvLeyes.Name = "dgvLeyes";
             this.dgvLeyes.ReadOnly = true;
+            this.dgvLeyes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLeyes.Size = new System.Drawing.Size(687, 178);
             this.dgvLeyes.TabIndex = 53;
             this.dgvLeyes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLeyes_CellContentClick);
@@ -310,20 +312,20 @@
             // 
             // fechaCreacion
             // 
-            this.fechaCreacion.CustomFormat = "dd/MM/yyyy";
-            this.fechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaCreacion.CustomFormat = "dd/MM/yyyy hh:mm";
+            this.fechaCreacion.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaCreacion.Location = new System.Drawing.Point(88, 91);
             this.fechaCreacion.Name = "fechaCreacion";
-            this.fechaCreacion.Size = new System.Drawing.Size(100, 20);
+            this.fechaCreacion.Size = new System.Drawing.Size(258, 20);
             this.fechaCreacion.TabIndex = 86;
             // 
             // fechaCreacionReglamento
             // 
-            this.fechaCreacionReglamento.CustomFormat = "dd/MM/yyyy";
-            this.fechaCreacionReglamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaCreacionReglamento.CustomFormat = "dd/MM/yyyy hh:mm";
+            this.fechaCreacionReglamento.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.fechaCreacionReglamento.Location = new System.Drawing.Point(88, 340);
             this.fechaCreacionReglamento.Name = "fechaCreacionReglamento";
-            this.fechaCreacionReglamento.Size = new System.Drawing.Size(100, 20);
+            this.fechaCreacionReglamento.Size = new System.Drawing.Size(258, 20);
             this.fechaCreacionReglamento.TabIndex = 87;
             // 
             // contenido

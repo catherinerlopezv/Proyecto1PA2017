@@ -59,6 +59,8 @@ namespace Proyectro
             sistema = SisLey.getInstance();
             busquedaLeyes = new ArrayList();
             busquedaReglamentos = new ArrayList();
+            refreshDataPrestamoLeyes();
+            refreshDataPrestamoReglamentos();
         }
 
         private void refreshDataBusquedaLeyes()
@@ -129,7 +131,34 @@ namespace Proyectro
             if (sistema.PrestamoLeyes.Count > 0)
             {
                 BindingSource bi = new BindingSource();
-                bi.DataSource = sistema.PrestamoLeyes;
+                if (historialPrestamos.Checked)
+                {
+                    bi.DataSource = sistema.PrestamoLeyes;
+                } else if (informeXley.Checked)
+                {
+                    ArrayList pl = new ArrayList();
+                    foreach (Prestamo item in sistema.PrestamoLeyes)
+                    {
+                        if (item.NumeroDocumento == numeroLeyoGrupo.Value)
+                        {
+                            pl.Add(item);
+                        }
+                    }
+                    bi.DataSource = pl;
+                }
+                else
+                {
+                    ArrayList pl = new ArrayList();
+                    foreach (Prestamo item in sistema.PrestamoLeyes)
+                    {
+                        if (item.NumGrupo == numeroLeyoGrupo.Value)
+                        {
+                            pl.Add(item);
+                        }
+                    }
+                    bi.DataSource = pl;
+                }
+                
                 dvgPrestamosLey.DataSource = bi;
             }
             dvgPrestamosLey.Refresh();
@@ -145,7 +174,34 @@ namespace Proyectro
             if (sistema.PrestamoReglamentos.Count > 0)
             {
                 BindingSource bi = new BindingSource();
-                bi.DataSource = sistema.PrestamoReglamentos;
+                if (historialPrestamos.Checked)
+                {
+                    bi.DataSource = sistema.PrestamoReglamentos;
+                }
+                else if (informeXley.Checked)
+                {
+                    ArrayList pl = new ArrayList();
+                    foreach (Prestamo item in sistema.PrestamoReglamentos)
+                    {
+                        if (item.NumeroDocumentoMaestro == numeroLeyoGrupo.Value)
+                        {
+                            pl.Add(item);
+                        }
+                    }
+                    bi.DataSource = pl;
+                }
+                else
+                {
+                    ArrayList pl = new ArrayList();
+                    foreach (Prestamo item in sistema.PrestamoReglamentos)
+                    {
+                        if (item.NumGrupo == numeroLeyoGrupo.Value)
+                        {
+                            pl.Add(item);
+                        }
+                    }
+                    bi.DataSource = pl;
+                }
                 dgvPrestamosReglamento.DataSource = bi;
             }
             dgvPrestamosReglamento.Refresh();
@@ -428,8 +484,63 @@ namespace Proyectro
             }
             int indexPR = sistema.PrestamoReglamentos.IndexOf(prestamoReglamentoSeleccionado);
             prestamoReglamentoSeleccionado.Estado = "Devuelto";
-            sistema.PrestamoReglamentos[indexPR] = prestamoReglamentoSeleccionado;            
+            sistema.PrestamoReglamentos[indexPR] = prestamoReglamentoSeleccionado;
+            refreshDataPrestamoReglamentos();
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (sistema.UsuarioAsesor == null)
+            {
+                if (sistema.UsuarioParlamentario.InUsuario.ToLower() != prestamoLeySeleccionado.Usuario.ToLower())
+                {
+                    MessageBox.Show("Solo puede devolver Ley prestado con su usuario");
+                    return;
+                }
+            }
+            else
+            {
+                if (sistema.UsuarioAsesor.InUsuario.ToLower() != prestamoLeySeleccionado.Usuario.ToLower())
+                {
+                    MessageBox.Show("Solo puede devolver Ley prestado con su usuario");
+                    return;
+                }
+            }
+
+            if (prestamoLeySeleccionado.Estado == "Devuelto")
+            {
+                MessageBox.Show("La ley seleccionada ya fue devuelta");
+                return;
+            }
+
+            //se devuelve la copia de la ley
+            int index = -1;
+            
+            Ley item;
+            
+            for (index = 0; index < sistema.Leyes.Count; index++)
+            {
+                item = (Ley)sistema.Leyes[index];
+                if (item.NumeroDocumento == prestamoLeySeleccionado.NumeroDocumento)
+                {
+                    
+                    item.CopiasDisponibles++; //aumenta copias disponibles
+                    item.ColaCopias.Add(prestamoLeySeleccionado.NumCopia); //devuelve el numero de copia dejandola al final de la cola
+                    sistema.Leyes[index] = item; //actualiza la ley
+                    break;
+                }
+            }
+            int indexPL = sistema.PrestamoLeyes.IndexOf(prestamoLeySeleccionado);
+            prestamoLeySeleccionado.Estado = "Devuelto";
+            sistema.PrestamoLeyes[indexPL] = prestamoLeySeleccionado;
+            refreshDataPrestamoLeyes();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            refreshDataPrestamoLeyes();
+            refreshDataPrestamoReglamentos();
         }
     }
 }
